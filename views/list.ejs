@@ -7,7 +7,21 @@
   <title>TO Do List App </title>
 </head>
 <body>
-  <h1>It's  <%= dayOfWeek %>!</h1>
+  <h1> <%= dayOfWeek %></h1>
   <h2>What do you want to do first?</h2>
+  <ul>
+
+
+  <% for (var i=0; i < newListItems.length; i++) { %>
+    <li><%= newListItems[i] %></li>
+  <% } %>
+
+  </ul>
+
+  <form action="/" method="post">
+    <input type="text" name="newToDo">
+    <button type="submit" name="button">Add</button>
+  </form>
+
 </body>
 </html>
